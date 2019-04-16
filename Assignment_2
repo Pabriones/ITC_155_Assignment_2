@@ -1,14 +1,24 @@
-import java.util.*;
+import java.util.ArrayList;
 
-class Assignment_2{
+class Assignment2_Test {
+	public static void main(String []args)
+	{
+	    ArrayList <String> stringList = new ArrayList <String>();
+	    stringList.add("this");
+	    stringList.add("is");
+	    stringList.add("a");
+	    stringList.add("test");
+	    removeEvenLength(stringList);
+	}
 
-	public static void removeEvenLength(ArrayList<String> array) {
-		for (int i = 0; i < array.size(); i++) {
-			String word = array.get(i);
-			if (word.length() % 2 == 0) {
-				array.remove(i);
-				i--;
-			}
-    	}    
+	private static void removeEvenLength(ArrayList<String> stringList) {
+		 for(int i = 0; i <stringList.size(); i++){
+	            String word = stringList.get(i);
+	            if(word.length() % 2 == 0){
+	                stringList.remove(word);
+	                i = i + 1;
+	            }
+	            System.out.println(stringList);      
+		 }
 	}
 }
