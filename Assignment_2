@@ -1,31 +1,14 @@
-import java.util.ArrayList;
+import java.util.*;
 
-public class Assignment2 {
-	
-	public static void main(String[] args) {
-		ArrayList<String> words = new ArrayList<String>();
-		
-		words.add("Apple");
-		words.add("Hello");
-		words.add("Banana");
-		words.add("Cantaloupe");
-		words.add("Durian");
-		words.add("Apple");
-		words.add("Eggplant");
-		words.add("Fruits");
-		words.add("French Fries");
-		words.add("Gold Fish");
-		
-		System.out.println("Words are: " + words);
-		
-		for (int i = 4 ; i < words.size(); i++) {
-			String word = words.get(i);
+class Assignment_2{
+
+	public static void removeEvenLength(ArrayList<String> array) {
+		for (int i = 0; i < array.size(); i++) {
+			String word = array.get(i);
 			if (word.length() % 2 == 0) {
-				words.remove(word);
-				i --;
-				System.out.println("The remaining words are: " + word);	
+				array.remove(i);
+				i--;
 			}
-		}
+    	}    
 	}
 }
-
